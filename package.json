@@ -1,0 +1,19 @@
+{
+  "name": "songbird",
+  "version": "1.0.0",
+  "description": "A lyric fetching application.",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "lyricist": "^0.1.1",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,80 @@
+h1 {
+	text-align: center;
+	font-size: 100px
+}
+h3, p {
+	color: white !important;
+}
+
+#artist {
+	display: none;
+	margin-top: 5%;
+}
+#artist img {
+	width: 50%;
+}
+
+.thumbnail {
+	text-align: center;
+	border: none;
+}
+.input-group {
+	width: 100%;
+	margin-top: 5%;
+	color: white !important;
+}
+input {
+	border: none !important;
+	color: white !important;
+	text-align: center;
+	outline: none !important;
+	font-size: 30px !important;
+}
+input::-webkit-input-placeholder {
+	color: white !important;
+}
+
+#searching {
+	margin-top: 10%;
+	display: none;
+}
+
+#searching img {
+	width: 30%;
+	margin-left: 35%;
+}
+
+#lyrics {
+	color: yellow;
+	font-size: 50px;
+}
+button {
+	margin-top: 2%;
+	margin-left: 45%;
+	width: 10%;
+	font-size: 20px;
+	min-width: 50px;
+}
+body {
+	background-image: url(background.jpg);
+	background-attachment: fixed;
+	background-position: fixed;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #561a65;
+	overflow: hidden;
+	width: 100%;
+}
+
+#searchbar {
+	margin-top: 15%;
+}
+
+.transparent {
+	background-color: rgba(0, 0, 0, 0);
+}
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

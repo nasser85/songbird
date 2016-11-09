@@ -3,6 +3,7 @@
 
 	var song;
 	var gamePlay;
+	var d = document.getElementById('bird');
 	$("#send").click(function(){
 		
 		if ($('#music-search').val() !== '') {
@@ -33,6 +34,7 @@
         return false;
     });
 	$('#again').on('click', function() {
+		d.style.display = "none";
         $('#searchbar').css('display', 'block');
         $('#music-search').val('');
         $('#artist').css('display', 'none');
@@ -43,23 +45,25 @@
         $('marquee').remove();
     })
     $('#play').on('click', function() {
-    	$('body').css('background-image', 'url(stars.jpg)').css('background-repeat', 'repeat').css('background-position', "700px, 500px");
-    	var lyricText = document.createElement('marquee');
+    	$('body').css('background-image', 'url(stars.jpg)').css('background-repeat', 'repeat-x').css('background-position', "700px, 500px");
 
     	$('#artist').append("<marquee id='lyrics' scrollamount='0' behavior='scroll' direction='left'></marquee>");
     	$('marquee').html(song.lyrics);
         $('marquee').attr('scrollamount', '10');
         $('#artist-pic').css('width', '20%').css('margin-left', '40%')
         $('#play').css('display', 'none');
+        
+        d.style.backgroundImage = "url('bird.gif')"
+            d.style.display = "block";
+            d.style.position = "absolute";
+            d.style.left = '10%';
+            console.log($('marquee').offset().top);
+            d.style.top = $('marquee').offset().top - 100;
+           	d.style.width = 200;
+           	d.style.height = 170;
+           
     	var begin= new Date().getTime();
         gamePlay = setInterval(function() {
-            // if (spritePos < spriteArray.length) {
-            //     spritePos ++;
-            // } else {
-            //     spritePos = 0;
-            // }
-            
-            // d.style.backgroundPosition = spriteArray[spritePos];
             var x= Math.floor((new Date().getTime()-begin)/25);
             document.body.style.backgroundPosition = -x + 'px, 500px';
            

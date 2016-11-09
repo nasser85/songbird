@@ -34,6 +34,12 @@ input::-webkit-input-placeholder {
 	color: white !important;
 }
 
+  #bird {
+  	
+	 display: none;
+	 z-index: 10;
+  }
+
 #searching {
 	margin-top: 10%;
 	display: none;

@@ -69,4 +69,17 @@
            
         }, 50);
     })
+
+	$(':root').on('keydown', function (event) {
+		if ($('marquee')) {
+			if (event.keyCode == 38 && parseInt(d.style.top) > 5) {
+				d.style.top = parseInt(d.style.top) - 20;
+				$('#lyrics').attr('scrollamount', 30);
+				console.log($('marquee').attr('scrollamount'));
+			}
+			if (event.keyCode == 40 && parseInt(d.style.top) < $(window).height()-200) {
+				d.style.top = parseInt(d.style.top) + 20;
+			}
+		}
+	})
 })();

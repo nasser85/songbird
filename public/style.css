@@ -44,7 +44,7 @@ input::-webkit-input-placeholder {
 	margin-left: 35%;
 }
 
-#lyrics {
+marquee {
 	color: yellow;
 	font-size: 50px;
 }

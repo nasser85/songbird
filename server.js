@@ -17,6 +17,8 @@ app.use('/api', require(apiPath));
 app.use('/*', function(req, res) {
 	res.sendFile(indexPath)
 });
-app.listen(3001, function() {
-	console.log("Server is up on port 3001!")
+
+var PORT = process.env.PORT || 3001;
+app.listen(PORT, function () {
+    console.log('Server started on port 3001');
 });

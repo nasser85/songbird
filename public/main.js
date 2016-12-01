@@ -74,10 +74,10 @@
 		if ($('marquee')) {
 			if (event.keyCode == 38 && parseInt(d.style.top) > 5) {
 				d.style.top = parseInt(d.style.top) - 20;
-				$('#lyrics').attr('scrollamount', 30);
-				console.log($('marquee').attr('scrollamount'));
+				$('#lyrics').css('fontSize', '+=3');
 			}
 			if (event.keyCode == 40 && parseInt(d.style.top) < $(window).height()-200) {
+                $('#lyrics').css('fontSize', '-=3');
 				d.style.top = parseInt(d.style.top) + 20;
 			}
 		}
